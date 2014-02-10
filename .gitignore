@@ -1,2 +1,4 @@
 *.scss
+*.scssc
 *.rb
+*.config
