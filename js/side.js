@@ -1,8 +1,9 @@
 (function() {
   $(function() {
-    var rArray;
+    var rArray, rArrayLen;
     rArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-    return $(".split").each(function(i) {
+    rArrayLen = rArray.length;
+    $(".split").each(function(i) {
       var orginalText, originalLen, _self;
       _self = $(this);
       orginalText = [];
@@ -21,6 +22,9 @@
           id: "id" + i + k
         }).text(v).appendTo(_self);
       });
+    });
+    $(".pop" + rArrayLen).on("webkitAnimationEnd animationend", function() {
+      return $(".black").addClass("tada");
     });
   });
 

@@ -1,5 +1,10 @@
 $ ->
+################################################################################################
+#split the characters and append it back to Parent
+################################################################################################
+
   rArray = [1..16]
+  rArrayLen = rArray.length
   $(".split").each (i) ->
     _self = $(this) #init
     orginalText = []
@@ -28,3 +33,13 @@ $ ->
         id: "id" + i + k
       ).text(v).appendTo _self
 
+################################################################################################
+# add tada to black when last character is visible
+################################################################################################
+
+  $(".pop"+rArrayLen).on "webkitAnimationEnd animationend", ->
+    $(".black").addClass "tada"
+
+
+
+  return
